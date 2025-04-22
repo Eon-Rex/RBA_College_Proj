@@ -1,0 +1,45 @@
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px; /* Small padding for compact screens */
+  }
+
+  header, footer {
+    padding: 10px; /* Consistent padding for header and footer */
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center; /* Center align header content */
+  }
+
+  .nav-bar {
+    display: none; /* Hide navigation bar on smaller screens */
+  }
+
+  .about-card {
+    max-width: 100%; /* Ensure cards take full width */
+  }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem; /* Adjust heading size for small screens */
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+/* For screens larger than 768px */
+@media (min-width: 769px) {
+  .sidebar {
+    display: none; /* Hide sidebar on larger screens */
+  }
+}

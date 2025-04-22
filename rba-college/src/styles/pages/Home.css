@@ -1,0 +1,80 @@
+.home {
+  padding: 40px; /* Generous padding for spacing */
+  background-color: #f4f4f9; /* Light background for a clean look */
+  text-align: center;
+}
+
+.home-title {
+  font-size: 2.5rem; /* Scaled font size for the title */
+  color: #4caf50; /* Green for branding */
+  font-weight: bold;
+  margin-bottom: 20px; /* Space below the title */
+}
+
+.home-description {
+  margin-top: 20px; /* Space above the description */
+  line-height: 1.8; /* Comfortable line height for readability */
+  color: #333333; /* Dark text for contrast */
+  font-size: 1rem; /* Standard font size for the description */
+}
+
+.course-tabs {
+  margin: 20px 0;
+}
+
+.tab-header {
+  display: flex;
+  overflow-x: auto; /* Allow horizontal scrolling on small screens */
+  scrollbar-width: none; /* Hide scrollbar for modern browsers */
+}
+
+.tab-header::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.tab-button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  color: #333333; /* Dark text color */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.tab-button.active {
+  border-bottom: 2px solid #ff9800; /* Orange for active tab */
+  color: #ff9800; /* Orange text for active tab */
+  font-weight: bold;
+}
+
+.tab-button:hover {
+  color: #ff9800; /* White text on hover */
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+
+.tab-panel {
+  padding: 10px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .tab-header {
+    flex-wrap: nowrap; /* Prevent wrapping of tabs */
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+
+  .tab-button {
+    flex: 0 0 auto; /* Prevent buttons from shrinking */
+    font-size: 14px; /* Slightly smaller font size for small screens */
+    padding: 8px 15px; /* Adjust padding for smaller screens */
+  }
+}

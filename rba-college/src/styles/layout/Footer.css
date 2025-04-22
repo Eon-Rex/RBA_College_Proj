@@ -1,0 +1,48 @@
+/* Footer Styling */
+footer {
+  background-color: #333333; /* Dark background for footer */
+  padding: 20px; /* Spacing around the footer */
+  text-align: center;
+  color: #ffffff; /* White text for contrast */
+}
+
+/* Footer Content */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  gap: 15px; /* Space between elements */
+}
+
+/* Footer Links List */
+.footer-content ul {
+  list-style: none;
+  display: flex;
+  gap: 15px; /* Space between links */
+  padding: 0;
+  margin: 0;
+}
+
+/* Footer Links */
+.footer-content a {
+  color: #ffffff; /* White text for links */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.footer-content a:hover {
+  color: #ff9800; /* Orange color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    text-align: center;
+  }
+
+  .footer-content ul {
+    justify-content: center; /* Center links on smaller screens */
+  }
+}

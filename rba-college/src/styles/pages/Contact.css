@@ -1,0 +1,81 @@
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px; /* Fixed padding */
+  background-color: #ffffff; /* White background for the card */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-family: 'Arial', sans-serif; /* Default font family */
+}
+
+.contact-container h2 {
+  text-align: center;
+  color: #333333; /* Dark heading color */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between form elements */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px; /* Space below the label */
+  font-weight: bold;
+  color: #666666; /* Subtle text color for labels */
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px; /* Fixed padding for inputs */
+  border: 1px solid #cccccc; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Standard font size */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #4caf50; /* Green border on focus */
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px; /* Minimum height for textarea */
+}
+
+.submit-button {
+  padding: 10px 20px; /* Fixed padding for button */
+  background-color: #4caf50; /* Green background */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 18px; /* Larger font size for button */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.submit-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.contact-details {
+  margin-top: 20px; /* Space above contact details */
+  text-align: center;
+}
+
+.contact-details h3 {
+  color: #333333; /* Dark heading color */
+  margin-bottom: 10px; /* Space below the heading */
+}
+
+.contact-details p {
+  margin: 8px 0; /* Space between paragraphs */
+  color: #666666; /* Subtle text color */
+}

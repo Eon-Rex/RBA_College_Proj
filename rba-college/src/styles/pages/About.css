@@ -1,0 +1,35 @@
+.about {
+  padding: 40px; /* Generous padding for spacing */
+  background-color: #f4f4f9; /* Light background for a clean look */
+}
+
+.about-title {
+  font-size: 2.5rem; /* Scaled font size for headings */
+  color: #4caf50; /* Green for branding */
+  font-weight: bold;
+  text-align: center; /* Centered title for better presentation */
+  margin-bottom: 20px; /* Space below the title */
+}
+
+.about-content {
+  margin-top: 20px; /* Space above the content */
+  line-height: 1.8; /* Comfortable line height for readability */
+  color: #333333; /* Dark text for contrast */
+  font-size: 1rem; /* Standard font size for content */
+  text-align: justify; /* Justified text for a clean layout */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about {
+    padding: 20px; /* Reduced padding for smaller screens */
+  }
+
+  .about-title {
+    font-size: 2rem; /* Adjusted font size for smaller screens */
+  }
+
+  .about-content {
+    font-size: 0.9rem; /* Slightly smaller text for compact screens */
+  }
+}
