@@ -1,6 +1,8 @@
 // filepath: rba-college-website/src/components/Footer.tsx
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import '../../styles/layout/Footer.css';
+
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
@@ -8,9 +10,9 @@ const Footer: React.FC = () => {
         <p>&copy; {new Date().getFullYear()} RBA College. All rights reserved.</p>
         <nav>
           <ul>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/courses">Courses</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/courses">Courses</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </nav>
       </div>

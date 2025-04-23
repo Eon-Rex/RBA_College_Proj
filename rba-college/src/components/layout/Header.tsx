@@ -26,20 +26,20 @@ const NavList = ({ onClick }: { onClick?: () => void }) => {
       </li>
       <li>
         <NavLink
-          to="/courses/bsc"
+          to="/courses/llb"
           onClick={onClick}
           className={({ isActive }) => (isActive ? 'active-tab' : '')}
         >
-          BSc
+          LLB
         </NavLink>
       </li>
       <li>
         <NavLink
-          to="/courses/msc"
+          to="/courses/bed"
           onClick={onClick}
           className={({ isActive }) => (isActive ? 'active-tab' : '')}
         >
-          MSc
+          BED
         </NavLink>
       </li>
       <li>
@@ -48,16 +48,34 @@ const NavList = ({ onClick }: { onClick?: () => void }) => {
           onClick={onClick}
           className={({ isActive }) => (isActive ? 'active-tab' : '')}
         >
-          BCom
+          B.Com
         </NavLink>
       </li>
       <li>
         <NavLink
-          to="/courses/mcom"
+          to="/courses/bba"
           onClick={onClick}
           className={({ isActive }) => (isActive ? 'active-tab' : '')}
         >
-          MCom
+          BBA
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/courses/mca"
+          onClick={onClick}
+          className={({ isActive }) => (isActive ? 'active-tab' : '')}
+        >
+          MCA
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/courses/bca"
+          onClick={onClick}
+          className={({ isActive }) => (isActive ? 'active-tab' : '')}
+        >
+          BCA
         </NavLink>
       </li>
       <li>
