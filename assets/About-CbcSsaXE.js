@@ -1,0 +1,1 @@
+import{j as t}from"./index-CbefjkKy.js";const o=()=>t.jsxs("div",{className:"about",children:[t.jsx("h1",{className:"about-title",children:"About RBA College"}),t.jsx("p",{className:"about-content",children:"RBA College is committed to providing high-quality education and fostering a community of lifelong learners."})]});export{o as default};
