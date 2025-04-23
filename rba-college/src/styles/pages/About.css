@@ -1,35 +1,46 @@
 .about {
-  padding: 40px; /* Generous padding for spacing */
-  background-color: #f4f4f9; /* Light background for a clean look */
+  position: relative;
+  padding: 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4caf50, #81c784); /* Gradient background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #ffffff; /* White curved background */
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  z-index: 0;
+}
+
+.about-card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  text-align: center;
+  z-index: 1;
 }
 
 .about-title {
-  font-size: 2.5rem; /* Scaled font size for headings */
-  color: #4caf50; /* Green for branding */
-  font-weight: bold;
-  text-align: center; /* Centered title for better presentation */
-  margin-bottom: 20px; /* Space below the title */
+  font-size: 2rem;
+  color: #333333;
+  margin-bottom: 15px;
 }
 
 .about-content {
-  margin-top: 20px; /* Space above the content */
-  line-height: 1.8; /* Comfortable line height for readability */
-  color: #333333; /* Dark text for contrast */
-  font-size: 1rem; /* Standard font size for content */
-  text-align: justify; /* Justified text for a clean layout */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .about {
-    padding: 20px; /* Reduced padding for smaller screens */
-  }
-
-  .about-title {
-    font-size: 2rem; /* Adjusted font size for smaller screens */
-  }
-
-  .about-content {
-    font-size: 0.9rem; /* Slightly smaller text for compact screens */
-  }
+  font-size: 1rem;
+  color: #666666;
+  line-height: 1.6;
 }

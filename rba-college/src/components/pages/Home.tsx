@@ -1,37 +1,111 @@
-
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import React, { useEffect } from 'react';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import '../../styles/pages/Home.css';
-import CourseNav from '../layout/CourseNav';
-
-const courses = [
-  { id: 1, name: 'Computer Science', duration: '4 years' },
-  { id: 2, name: 'Business Administration', duration: '3 years' },
-  { id: 3, name: 'Graphic Design', duration: '2 years' },
-  { id: 4, name: 'Information Technology', duration: '4 years' },
-  { id: 5, name: 'Psychology', duration: '3 years' },
-];
 
 const Home: React.FC = () => {
-  return (
-    <>    
-    <CourseNav courses={courses} />
-    <main className="home">
-      <Helmet>
-        <title>Home - RBA College</title>
-        <meta name="description" content="Welcome to RBA College. Explore our courses and programs to achieve your academic and career goals." />
-        <meta name="keywords" content="RBA College, education, courses, programs, academic goals" />
-      </Helmet>
-      <section className="home-content">
-        <h1 className="home-title">Welcome to RBA College</h1>
-        <p className="home-description">
-          RBA College offers a wide range of courses to help you achieve your academic and career goals. Join us to unlock your potential and shape your future.
-        </p>
-        
-      </section>
-    </main>
-    </>
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const target = entry.target as HTMLElement;
 
+          if (entry.isIntersecting) {
+            // Add slide-in classes when the card is visible
+            if (target.dataset.index === '1' || target.dataset.index === '2') {
+              target.classList.add('slide-in-left');
+              target.classList.remove('slide-out-center-left');
+            } else if (target.dataset.index === '3' || target.dataset.index === '4') {
+              target.classList.add('slide-in-right');
+              target.classList.remove('slide-out-center-right');
+            }
+          } else {
+            // Add slide-out-to-center classes when the card is not visible
+            if (target.dataset.index === '1' || target.dataset.index === '2') {
+              target.classList.remove('slide-in-left');
+              target.classList.add('slide-out-center-left');
+            } else if (target.dataset.index === '3' || target.dataset.index === '4') {
+              target.classList.remove('slide-in-right');
+              target.classList.add('slide-out-center-right');
+            }
+          }
+        });
+      },
+      { threshold: 0.2 } // Trigger when 20% of the card is visible
+    );
+
+    const cards = document.querySelectorAll('.highlight-card');
+    cards.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <HelmetProvider>
+      <main className="home">
+        <Helmet>
+          <title>Home - RBA College</title>
+          <meta
+            name="description"
+            content="Welcome to RBA College. Explore our courses and programs to achieve your academic and career goals."
+          />
+          <meta
+            name="keywords"
+            content="RBA College, education, courses, programs, academic goals"
+          />
+        </Helmet>
+
+        {/* Hero Section */}
+        <section className="hero-section">
+          <div className="hero-content">
+            <h1>Welcome to RBA College, Faridabad</h1>
+            <button className="cta-button">Explore Courses</button>
+          </div>
+        </section>
+
+        {/* Highlights Section */}
+        <section className="highlights-section">
+          <div className="highlight-card" data-index="1">
+            <h3>📘 Courses Offered</h3>
+            <p>Explore a variety of undergraduate and postgraduate programs.</p>
+          </div>
+          <div className="highlight-card" data-index="2">
+            <h3>🎓 50+ Years of Legacy</h3>
+            <p>Providing quality education since 1970.</p>
+          </div>
+          <div className="highlight-card" data-index="3">
+            <h3>🏅 20,000+ Alumni</h3>
+            <p>Join a network of successful professionals worldwide.</p>
+          </div>
+          <div className="highlight-card" data-index="4">
+            <h3>📍 Prime Location</h3>
+            <p>Located in the heart of Faridabad with excellent connectivity.</p>
+          </div>
+        </section>
+
+        {/* Why Choose Us Section */}
+        <section className="why-choose-us-section">
+          <h2>Why Choose Us?</h2>
+          <div className="why-choose-us-grid">
+            <div className="why-choose-us-item">
+              <h3>👩‍🏫 Experienced Faculty</h3>
+              <p>Learn from highly qualified and experienced educators.</p>
+            </div>
+            <div className="why-choose-us-item">
+              <h3>📚 Industry-Relevant Curriculum</h3>
+              <p>Stay ahead with courses designed for the modern industry.</p>
+            </div>
+            <div className="why-choose-us-item">
+              <h3>💰 Affordable Fees</h3>
+              <p>Get quality education at an affordable cost.</p>
+            </div>
+            <div className="why-choose-us-item">
+              <h3>🏫 State-of-the-Art Campus</h3>
+              <p>Enjoy a vibrant campus life with modern facilities.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </HelmetProvider>
   );
 };
 

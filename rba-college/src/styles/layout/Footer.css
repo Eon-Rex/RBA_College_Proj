@@ -1,9 +1,13 @@
-/* Footer Styling */
+
+
 footer {
+  height: 15vh;
   background-color: #333333; /* Dark background for footer */
   padding: 20px; /* Spacing around the footer */
   text-align: center;
   color: #ffffff; /* White text for contrast */
+  position: relative;
+  z-index: 10;
 }
 
 /* Footer Content */

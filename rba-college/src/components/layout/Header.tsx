@@ -3,46 +3,75 @@ import { Link, NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import '../../styles/layout/Header.css';
 
-const NavList = ({ onClick }: { onClick?: () => void }) => (
-  <ul className="nav-list">
-    <li>
-      <NavLink
-        to="/"
-        onClick={onClick}
-        className={({ isActive }) => (isActive ? 'active-tab' : '')}
-      >
-        Home
-      </NavLink>
-    </li>
-    <li>
-      <NavLink
-        to="/about"
-        onClick={onClick}
-        className={({ isActive }) => (isActive ? 'active-tab' : '')}
-      >
-        About
-      </NavLink>
-    </li>
-    <li>
-      <NavLink
-        to="/courses"
-        onClick={onClick}
-        className={({ isActive }) => (isActive ? 'active-tab' : '')}
-      >
-        Courses
-      </NavLink>
-    </li>
-    <li>
-      <NavLink
-        to="/contact"
-        onClick={onClick}
-        className={({ isActive }) => (isActive ? 'active-tab' : '')}
-      >
-        Contact
-      </NavLink>
-    </li>
-  </ul>
-);
+const NavList = ({ onClick }: { onClick?: () => void }) => {
+  return (
+    <ul className="nav-list">
+      <li>
+        <NavLink
+          to="/"
+          onClick={onClick}
+          className={({ isActive }) => (isActive ? 'active-tab' : '')}
+        >
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/about"
+          onClick={onClick}
+          className={({ isActive }) => (isActive ? 'active-tab' : '')}
+        >
+          About
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/courses/bsc"
+          onClick={onClick}
+          className={({ isActive }) => (isActive ? 'active-tab' : '')}
+        >
+          BSc
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/courses/msc"
+          onClick={onClick}
+          className={({ isActive }) => (isActive ? 'active-tab' : '')}
+        >
+          MSc
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/courses/bcom"
+          onClick={onClick}
+          className={({ isActive }) => (isActive ? 'active-tab' : '')}
+        >
+          BCom
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/courses/mcom"
+          onClick={onClick}
+          className={({ isActive }) => (isActive ? 'active-tab' : '')}
+        >
+          MCom
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/contact"
+          onClick={onClick}
+          className={({ isActive }) => (isActive ? 'active-tab' : '')}
+        >
+          Contact
+        </NavLink>
+      </li>
+    </ul>
+  );
+};
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
