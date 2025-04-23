@@ -184,35 +184,6 @@
   color: #666;
 }
 
-/* Student Reviews Section */
-.student-reviews-section {
-  padding: 40px 20px;
-  background: #fff;
-  text-align: center;
-}
-
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.review-card {
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background: #f9f9f9;
-}
-
-.review-card blockquote {
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.review-card p {
-  font-weight: bold;
-}
-
 /* Why Choose Us Section */
 .why-choose-us-section {
   padding: 40px 20px;
@@ -247,28 +218,6 @@
 .why-choose-us-item p {
   font-size: 0.9rem;
   color: #666;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .tab-header {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-  }
-
-  .tab-button {
-    flex: 0 0 auto;
-    font-size: 14px;
-    padding: 8px 15px;
-  }
-
-  .card {
-    padding: 15px;
-  }
-
-  .highlights-section {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
 }
 
 /* Dean Card */
@@ -330,8 +279,77 @@
   margin-bottom: 2rem;
 }
 
-/* Responsive Styles */
+/* Student Reviews Section */
+.student-reviews-section {
+  padding: 40px 20px;
+  background: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.what-our-students-say {
+  position: relative;
+  top: -35px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px;
+}
+
+.review-card {
+  position: relative;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding-top: 60px;
+}
+
+.avatar-image {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.review-card blockquote {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.review-card p {
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
+  .tab-header {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .tab-button {
+    flex: 0 0 auto;
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .highlights-section {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
   .dean-card {
     max-width: 90%;
   }
@@ -373,61 +391,4 @@
   .dean-card .actions p {
     font-size: 0.85rem;
   }
-}
-
-.review-card {
-  position: relative;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-
-.avatar-image{
-  position: absolute;
-  display: block;
-  height: 15vh;
-  top:70px;
-  left:0px;
-
-  
-}
-
-.what-our-students-say{
-  position: relative;
-    top: -35px;
-}
-
-.review-card {
-  position: relative;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Dynamic Avatar Positioning */
-.avatar-image {
-  position: absolute;
-  top: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  z-index: 2;
-}
-
-/* Ensure the review content doesn't overlap with the avatar */
-.review-card blockquote {
-  padding-top: 60px; 
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.review-card p {
-  font-weight: bold;
-  padding-top: 10px;
 }
