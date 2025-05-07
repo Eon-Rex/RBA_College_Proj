@@ -3,9 +3,19 @@ import { Link, NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import '../../styles/layout/Header.css';
 
+const featuredCourses = [
+  { id: 'llb', name: 'LLB' },
+  { id: 'ba-fine-arts', name: 'BA' },
+  { id: 'b-com', name: 'B.Com' },
+  { id: 'bba', name: 'BBA' },
+  { id: 'bpt', name: 'BPT' },
+  { id: 'bca', name: 'BCA' }
+];
+
 const NavList = ({ onClick }: { onClick?: () => void }) => {
   return (
     <ul className="nav-list">
+      {/* Static Nav Items */}
       <li>
         <NavLink
           to="/"
@@ -24,60 +34,21 @@ const NavList = ({ onClick }: { onClick?: () => void }) => {
           About
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to="/courses/llb"
-          onClick={onClick}
-          className={({ isActive }) => (isActive ? 'active-tab' : '')}
-        >
-          LLB
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/courses/bed"
-          onClick={onClick}
-          className={({ isActive }) => (isActive ? 'active-tab' : '')}
-        >
-          BED
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/courses/bcom"
-          onClick={onClick}
-          className={({ isActive }) => (isActive ? 'active-tab' : '')}
-        >
-          B.Com
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/courses/bba"
-          onClick={onClick}
-          className={({ isActive }) => (isActive ? 'active-tab' : '')}
-        >
-          BBA
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/courses/mca"
-          onClick={onClick}
-          className={({ isActive }) => (isActive ? 'active-tab' : '')}
-        >
-          MCA
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/courses/bca"
-          onClick={onClick}
-          className={({ isActive }) => (isActive ? 'active-tab' : '')}
-        >
-          BCA
-        </NavLink>
-      </li>
+
+      {featuredCourses.map((course) => (
+        <li key={course.id}>
+          <NavLink
+            to={`/course/${course.id}`}
+            onClick={onClick}
+            className={({ isActive }) => (isActive ? 'active-tab' : '')}
+          >
+            {course.name}
+          </NavLink>
+        </li>
+      ))}
+
+      
+
       <li>
         <NavLink
           to="/contact"
@@ -90,6 +61,7 @@ const NavList = ({ onClick }: { onClick?: () => void }) => {
     </ul>
   );
 };
+
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import useHistory, { useNavigate }  from 'react-router-dom';
 import "../../styles/pages/Home.css";
 import DeanImage from "../../assets/dean.svg";
 import ReviewImage1 from "../../assets/studentsImages/S1.svg";
@@ -27,8 +28,11 @@ const studentReviews = [
 ];
 
 const Home: React.FC = () => {
+  const navigate = useNavigate();
 
-  
+  const handleButtonClick = () => {
+    navigate('/courses'); 
+  };
 
   useEffect(() => {
     AOS.init({
@@ -59,7 +63,7 @@ const Home: React.FC = () => {
         <section className="hero-section">
           <div className="hero-content">
             <h1>Welcome to RBA College, Faridabad</h1>
-            <button className="cta-button">Explore Courses</button>
+            <button className="cta-button" onClick={handleButtonClick}>Explore Courses</button>
           </div>
         </section>
 
