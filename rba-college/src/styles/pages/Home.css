@@ -1,394 +1,991 @@
-/* General Styles */
 .home {
-  padding: 40px;
-  background-color: #f4f4f9;
-  text-align: center;
-  position: relative;
-  z-index: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: var(--text);
+  overflow-x: hidden;
 }
 
-.home-title {
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
   font-size: 2.5rem;
-  color: #4caf50;
-  font-weight: bold;
-  margin-bottom: 20px;
+  color: var(--dark);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
 }
 
-.home-description {
-  margin-top: 20px;
-  line-height: 1.8;
-  font-size: 1rem;
-  color: #333;
+.divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  margin: 0 auto 1.5rem;
+  border-radius: 2px;
 }
 
-.course-tabs {
-  margin: 20px 0;
-}
-
-.tab-header {
-  display: flex;
-  overflow-x: auto;
-}
-
-.tab-header::-webkit-scrollbar {
-  display: none;
-}
-
-.tab-button {
-  padding: 10px 20px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  border-bottom: 2px solid transparent;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  color: #333;
-  white-space: nowrap;
-}
-
-.tab-button.active {
-  border-bottom: 2px solid #ff9800;
-  color: #ff9800;
-  font-weight: bold;
-}
-
-.tab-button:hover {
-  color: #ff9800;
-}
-
-.tab-content {
-  margin-top: 20px;
-}
-
-.tab-panel {
-  padding: 10px;
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+.section-subtitle {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 400;
 }
 
 /* Hero Section */
-.hero-section {
+.hero-section-home {
   position: relative;
-  background: linear-gradient(135deg, #4caf50, #81c784);
-  height: 60vh;
+  height: 100vh;
+  min-height: 600px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  color: #fff;
+  align-items: flex-end; /* Changed to align items at bottom */
   text-align: center;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  z-index: 1;
+  overflow: hidden;
+  margin-top: -80px;
+  padding-top: 80px;
+  padding-bottom: 80px; /* Added padding at bottom */
 }
 
-.hero-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+.hero-image-container {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: white;
+  padding: 0 20px;
+  max-width: 800px;
+  margin-bottom: 60px; /* Added margin to push button up slightly */
+}
+
+.hero-title-main {
+  display: block;
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  letter-spacing: -1px;
+}
+
+.hero-title-sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-weight: 300;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta-button {
-  background: #007bff;
-  color: #fff;
-  padding: 10px 20px;
+  background: var(--primary);
+  color: white;
+  padding: 16px 42px;
   border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .cta-button:hover {
-  background: #0056b3;
+  background: var(--primary-dark);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.scroll-indicator span {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  transform: rotate(45deg);
+  opacity: 0.8;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  background: white;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 -20px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* About Section */
 .about-section {
-  padding: 40px 20px;
-  background: #fff;
+  padding: 8rem 0;
+  background: white;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.stat-item {
+  background: var(--light);
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
   text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.about-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.about-section p {
+.stat-label {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.dean-card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dean-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.dean-image-container {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+}
+
+.dean-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.dean-card:hover .dean-image {
+  transform: scale(1.05);
+}
+
+.dean-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+}
+
+.dean-overlay h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.dean-overlay p {
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+.dean-info {
+  padding: 2rem;
+}
+
+.dean-info p {
+  font-style: italic;
+  color: var(--text-light);
+  line-height: 1.8;
   font-size: 1rem;
-  margin-bottom: 15px;
 }
 
 /* Highlights Section */
 .highlights-section {
+  padding: 6rem 0;
+  background: var(--light);
+}
+
+.highlights-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 40px 20px;
-  background: #f9f9f9;
-  margin-top: 100px;
-  overflow-x: hidden;
-  justify-items: center;
+  gap: 2rem;
 }
 
-.card {
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+.highlight-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
   text-align: center;
-  background: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.card.left {
-  justify-self: start;
+.highlight-card:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-.card.center {
-  justify-self: center;
-}
-
-.card.right {
-  justify-self: end;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-.card.slide-in-left, .card.slide-in-right {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.card.slide-out-center-left {
-  opacity: 0;
-  transform: translateX(-50px);
-}
-
-.card.slide-out-center-right {
-  opacity: 0;
-  transform: translateX(50px);
+.highlight-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+  display: inline-block;
 }
 
 .highlight-card h3 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--dark);
+  font-weight: 600;
 }
 
 .highlight-card p {
-  font-size: 0.9rem;
-  color: #666;
+  color: var(--text-light);
+  line-height: 1.7;
+  font-size: 1rem;
 }
 
-/* Why Choose Us Section */
-.why-choose-us-section {
-  padding: 40px 20px;
-  text-align: center;
-  overflow-x: hidden;
+/* Testimonials Section */
+.testimonials-section {
+  padding: 8rem 0;
+  background: white;
 }
 
-.why-choose-us-section h2 {
-  margin-bottom: 20px;
-  font-size: 2rem;
-}
-
-.why-choose-us-grid {
+.testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
-.why-choose-us-item {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
+.testimonial-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.why-choose-us-item h3 {
-  margin-bottom: 10px;
+.testimonial-card:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.quote-icon {
+  font-size: 5rem;
+  color: rgba(76, 175, 80, 0.05);
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.testimonial-content {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 2rem;
+}
+
+.testimonial-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-style: italic;
+  color: var(--text);
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+}
+
+.author-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1.5rem;
+  border: 3px solid var(--secondary);
+}
+
+.author-info h4 {
+  margin-bottom: 0.3rem;
+  color: var(--dark);
   font-size: 1.2rem;
 }
 
-.why-choose-us-item p {
+.author-info p {
+  color: var(--text-light);
   font-size: 0.9rem;
-  color: #666;
 }
 
-/* Dean Card */
-.dean-card {
-  background-color: white;
-  max-width: 360px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  border-radius: 2rem;
-  overflow: hidden;
-  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2);
-  transition: transform 300ms ease-in-out;
-  position: relative;
+/* CTA Section */
+.cta-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
   text-align: center;
-}
-
-.dean-card .avatar {
-  width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 1rem auto;
   position: relative;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  transition: transform 300ms ease-in-out;
+  overflow: hidden;
 }
 
-.dean-card .avatar img {
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0,0 L100,0 L100,100 Q50,80 0,100 Z"></path></svg>');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  opacity: 0.5;
+}
+
+.cta-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  font-weight: 700;
+}
+
+.cta-section p {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 300;
+}
+
+.cta-section .cta-button {
+  background: white;
+  color: var(--primary-dark);
+  font-weight: 700;
+  padding: 18px 48px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-section .cta-button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--primary-dark);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .hero-title-main {
+    font-size: 3.5rem;
+  }
+  
+  .hero-title-sub {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 90vh;
+    min-height: 500px;
+  }
+  
+  .hero-title-main {
+    font-size: 2.8rem;
+  }
+  
+  .about-content {
+    flex-direction: column;
+  }
+  
+  .dean-card {
+    max-width: 100%;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header h2 {
+    font-size: 2.2rem;
+  }
+  
+  .cta-section h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: 85vh;
+    min-height: 400px;
+  }
+  
+  .hero-title-main {
+    font-size: 2.2rem;
+  }
+  
+  .hero-title-sub {
+    font-size: 1.4rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .cta-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+  
+  .author-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+  }
+}
+
+/* Campus Life Section */
+.campus-section {
+  padding: 6rem 0;
+  background: var(--light);
+}
+
+.campus-highlight {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.campus-image-container {
+  flex: 1;
+  min-width: 300px;
+  height: 400px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.campus-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.campus-image-container:hover .campus-image {
+  transform: scale(1.05);
+}
+
+.campus-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+}
+
+.campus-overlay h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.campus-overlay p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.campus-features {
+  flex: 1;
+  min-width: 300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.campus-feature {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.campus-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.campus-feature h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+.campus-feature p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Academic Section */
+.academic-section {
+  padding: 6rem 0;
+  background: white;
+}
+
+.academic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.academic-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--primary);
+}
+
+.academic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.academic-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.academic-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--dark);
+}
+
+.academic-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Facilities Section */
+.facilities-section {
+  padding: 6rem 0;
+  background: var(--light);
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.facility-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.facility-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.facility-image-container {
+  height: 250px;
+  position: relative;
+}
+
+.facility-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.dean-card .avatar:hover {
-  transform: scale(1.1);
-}
-
-.dean-card h2.name {
-  font-size: 1.5rem;
-  margin: 1rem 0 0.5rem;
-}
-
-.dean-card .title {
-  color: #808080;
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.dean-card .actions h2 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.dean-card .actions p {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #555;
-  margin-bottom: 2rem;
-}
-
-/* Student Reviews Section */
-.student-reviews-section {
-  padding: 40px 20px;
-  background: #fff;
-  text-align: center;
-  position: relative;
-}
-
-.what-our-students-say {
-  position: relative;
-  top: -35px;
-}
-
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 50px;
-}
-
-.review-card {
-  position: relative;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding-top: 60px;
-}
-
-.avatar-image {
+.facility-overlay {
   position: absolute;
-  top: -50px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.facility-icon {
+  font-size: 2rem;
+}
+
+.facility-overlay h3 {
+  font-size: 1.3rem;
+}
+
+.facility-info {
+  padding: 1.5rem;
+}
+
+.facility-info p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.facility-button {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.facility-button:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Events Section */
+.events-section {
+  padding: 6rem 0;
+  background: white;
+}
+
+.events-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 3rem auto 0;
+  padding: 0 20px;
+}
+
+.events-timeline::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: var(--light);
+  top: 0;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 120px;
-  height: 120px;
+}
+
+.event-item {
+  display: flex;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.event-item:nth-child(odd) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.event-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--primary);
+  color: white;
   border-radius: 50%;
-  object-fit: cover;
-  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin: 0 20px;
+  z-index: 1;
 }
 
-.review-card blockquote {
-  font-style: italic;
-  margin-bottom: 10px;
+.event-content {
+  flex: 1;
+  background: var(--light);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-.review-card p {
-  font-weight: bold;
-  padding-top: 10px;
+.event-date {
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.event-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+.event-item p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.event-button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.event-button:hover {
+  background: var(--primary-dark);
+}
+
+/* Partners Section */
+.partners-section {
+  padding: 6rem 0;
+  background: var(--light);
+}
+
+.partners-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.partner-logo {
+  background: white;
+  padding: 1.5rem 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  font-weight: 700;
+  color: var(--dark);
+  transition: all 0.3s ease;
+}
+
+/* Enhanced CTA Section */
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.cta-button.primary {
+  background: white;
+  color: var(--primary-dark);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.cta-button.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cta-info {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+.cta-info a {
+  color: white;
+  text-decoration: underline;
+}
+
+.cta-info p {
+  margin: 0.5rem 0;
+}
+
+/* Rating Stars */
+.rating {
+  margin-top: 1rem;
+}
+
+.star-filled {
+  color: gold;
+}
+
+.star-empty {
+  color: #ccc;
+}
+
+/* Stat Icon */
+.stat-icon {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+/* Dean Credentials */
+.dean-credentials {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.dean-credentials p {
+  margin: 0.3rem 0;
+  font-style: normal;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .tab-header {
-    flex-wrap: nowrap;
-    overflow-x: auto;
+  .campus-highlight {
+    flex-direction: column;
   }
-
-  .tab-button {
-    flex: 0 0 auto;
-    font-size: 14px;
-    padding: 8px 15px;
+  
+  .events-timeline::before {
+    left: 30px;
   }
-
-  .card {
-    padding: 15px;
+  
+  .event-item, .event-item:nth-child(odd) {
+    flex-direction: row;
+    text-align: left;
   }
-
-  .highlights-section {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  
+  .event-icon {
+    margin-left: 0;
   }
-
-  .dean-card {
-    max-width: 90%;
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
   }
-
-  .dean-card h2.name {
-    font-size: 1.3rem;
-  }
-
-  .dean-card .title {
-    font-size: 0.9rem;
-  }
-
-  .dean-card .actions h2 {
-    font-size: 1rem;
-  }
-
-  .dean-card .actions p {
-    font-size: 0.9rem;
+  
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .dean-card {
-    max-width: 100%;
+  .campus-features {
+    grid-template-columns: 1fr;
   }
-
-  .dean-card h2.name {
-    font-size: 1.1rem;
-  }
-
-  .dean-card .title {
-    font-size: 0.85rem;
-  }
-
-  .dean-card .actions h2 {
-    font-size: 0.9rem;
-  }
-
-  .dean-card .actions p {
-    font-size: 0.85rem;
+  
+  .facilities-grid {
+    grid-template-columns: 1fr;
   }
 }

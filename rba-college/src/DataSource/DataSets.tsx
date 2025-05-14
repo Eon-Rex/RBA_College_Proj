@@ -1,3 +1,22 @@
+import llb from '../assets/CoursesBanners/llb.jpg';
+import BaFineArts from '../assets/CoursesBanners/BAARTS.png';
+import MBA from '../assets/CoursesBanners/MBA.png'
+import bba from '../assets/CoursesBanners/BBA.png'
+import BCA from '../assets/CoursesBanners/BCA.png'
+import Blib from '../assets/CoursesBanners/BLib.png'
+import BSCMed from '../assets/CoursesBanners/BSCMEdical.png'
+import Bcom from '../assets/CoursesBanners/Bcom.png'
+import Cert1 from '../assets/CoursesBanners/CertificateInAddvanceDigitalMedia.png'
+import cert2 from '../assets/CoursesBanners/CertificateinWebDevelopment.png'
+import Diploma from '../assets/CoursesBanners/DiplomaInGraphicsDesign.png'
+import MA from '../assets/CoursesBanners/MA.png'
+import Yoga from '../assets/CoursesBanners/Yoga.png'
+import physotherapiest from '../assets/CoursesBanners/Physiotherapy.png'
+import MCOM from '../assets/CoursesBanners/MCom.png'
+import YogaCret from '../assets/CoursesBanners/Yoga-Cret.png'
+import BSCComputertextile from '../assets/CoursesBanners/BSCComputer-Textile.png'
+import BSCHotelManagement from '..//assets/CoursesBanners/BscHotelManagement.png'
+import BSCMicrobiology from '../assets/CoursesBanners/BSCHons.png'
 const commonContact = {
   phone: "9210027962, 9810582924",
   email: "rbacollegefbd@gmail.com",
@@ -13,6 +32,7 @@ const courses = [
   {
     id: "ma-home-science",
     name: "MA (Master of Arts)",
+    bannerImage:MA,
     specialisation: "Home Science",
     duration: "2 years",
     eligibility: "Graduation from a recognised board",
@@ -46,6 +66,7 @@ const courses = [
   {
     id: "ma-history",
     name: "MA (Master of Arts)",
+    bannerImage:MA,
     specialisation: "History",
     duration: "2 years",
     eligibility: "Graduation from a recognised board",
@@ -79,6 +100,7 @@ const courses = [
   {
     id: "ma-hindi",
     name: "MA (Master of Arts)",
+    bannerImage:MA,
     specialisation: "Hindi",
     duration: "2 years",
     eligibility: "Graduation from a recognised board",
@@ -112,6 +134,7 @@ const courses = [
   {
     id: "ma-education",
     name: "MA (Master of Arts)",
+    bannerImage:MA,
     specialisation: "Education",
     duration: "2 years",
     eligibility: "Graduation from a recognised board",
@@ -146,6 +169,7 @@ const courses = [
     id: "ma-economics",
     name: "MA (Master of Arts)",
     specialisation: "Economics",
+    bannerImage:MA,
     duration: "2 years",
     eligibility: "Graduation from a recognised board",
     university: "Swami Vivekananda Subharti University Meerut",
@@ -179,6 +203,7 @@ const courses = [
     id: "ma-buddhist-studies",
     name: "MA (Master of Arts)",
     specialisation: "Buddhist Studies",
+    bannerImage:MA,
     duration: "2 years",
     eligibility: "Graduation from a recognised board",
     university: "Swami Vivekananda Subharti University Meerut",
@@ -212,6 +237,7 @@ const courses = [
     id: "ma-english",
     name: "MA (Master of Arts)",
     specialisation: "English",
+    bannerImage:MA,
     duration: "2 years",
     eligibility: "Graduation from a recognised board",
     university: "Swami Vivekananda Subharti University Meerut",
@@ -245,6 +271,7 @@ const courses = [
     id: "ma-library-information-science",
     name: "MA Library & Information Science",
     duration: "1 year",
+    bannerImage:MA,
     eligibility: "Graduation & Library /B-lib Program",
     university: "Swami Vivekananda Subharti University Meerut",
     mode: "Distance Education",
@@ -278,6 +305,7 @@ const courses = [
     id: "mcom-management",
     name: "M.Com",
     specialisation: "Management",
+    bannerImage:MCOM,
     duration: "2 years",
     eligibility: "Graduation from a recognised board",
     university: "Swami Vivekananda Subharti University Meerut",
@@ -308,6 +336,9 @@ const courses = [
     university: "Swami Vivekananda Subharti University Meerut",
     mode: "Distance Education",
     examPattern: "Semester system with 2 subjects each semester",
+    bannerImage: MBA,
+
+
     documentsRequired: [
       "10th Mark sheet & certificate",
       "12th Mark sheet & certificate",
@@ -341,6 +372,7 @@ const courses = [
     university: "Swami Vivekananda Subharti University Meerut",
     mode: "Distance Education",
     examPattern: "Semester system with 2 subjects each semester",
+    bannerImage: MBA,
     documentsRequired: [
       "10th Mark sheet & certificate",
       "12th Mark sheet & certificate",
@@ -374,6 +406,7 @@ const courses = [
     university: "Swami Vivekananda Subharti University Meerut",
     mode: "Distance Education",
     examPattern: "Semester system with 2 subjects each semester",
+    bannerImage: MBA,
     documentsRequired: [
       "10th Mark sheet & certificate",
       "12th Mark sheet & certificate",
@@ -401,6 +434,7 @@ const courses = [
   {
     id: "mba-it",
     name: "MBA (Master of Business Administration)",
+    bannerImage: MBA,
     specialisation: "Information Technology",
     duration: "2 years",
     eligibility: "Graduation from a recognised board",
@@ -434,6 +468,7 @@ const courses = [
   {
     id: "mba-marketing",
     name: "MBA (Master of Business Administration)",
+    bannerImage: MBA,
     specialisation: "Marketing Management",
     duration: "2 years",
     eligibility: "Graduation from a recognised board",
@@ -469,6 +504,7 @@ const courses = [
     name: "MBA (Master of Business Administration)",
     specialisation: "Fashion Designing",
     duration: "2 years",
+    bannerImage: MBA,
     eligibility: "Graduation from a recognised board",
     university: "Swami Vivekananda Subharti University Meerut",
     mode: "Distance Education",
@@ -500,6 +536,7 @@ const courses = [
   {
     id: "ma-journalism",
     name: "MA (Master of Arts)",
+    bannerImage:MA,
     specialisation: "Journalism & Mass Communication",
     duration: "2 years",
     eligibility: "Graduation from a recognised board",
@@ -534,6 +571,7 @@ const courses = [
     id: "ma-sociology",
     name: "MA (Master of Arts)",
     specialisation: "Sociology",
+    bannerImage:MA,
     duration: "2 years",
     eligibility: "Graduation from a recognised board",
     university: "Swami Vivekananda Subharti University Meerut",
@@ -569,6 +607,7 @@ const courses = [
     duration: "3 years",
     mode: "Regular (Non attending)",
     eligibility: "Graduation/Post Graduation with atleast 45% marks",
+    bannerImage:llb,
     documentsRequired: [
       "10th, 12th, Graduation, Post Graduation (if any)",
       "Original Migration Certificate (if not available can be given later)",
@@ -594,6 +633,7 @@ const courses = [
     university: "Swami Vivekananda Subharti University Meerut",
     mode: "Distance Education",
     examPattern: "Semester with 7 subjects each semester",
+    bannerImage: MBA,
     documentsRequired: [
       "10th Mark sheet & certificate",
       "12th Mark sheet & certificate",
@@ -621,6 +661,7 @@ const courses = [
   {
     id: "ma-public-admin",
     name: "MA (Master of Arts)",
+    bannerImage:MA,
     specialisation: "Public Administration",
     duration: "2 years",
     eligibility: "Graduation from a recognised board",
@@ -654,6 +695,7 @@ const courses = [
   {
     id: "ma-political-science",
     name: "MA (Master of Arts)",
+    bannerImage:MA,
     specialisation: "Political Sciences",
     duration: "2 years",
     eligibility: "Graduation from a recognised board",
@@ -687,6 +729,7 @@ const courses = [
   {
     id: "ma-mathematics",
     name: "MA (Master of Arts)",
+    bannerImage:MA,
     specialisation: "Mathematics",
     duration: "2 years",
     eligibility: "Graduation from a recognised board",
@@ -720,6 +763,7 @@ const courses = [
   {
     id: "ma-economics",
     name: "MA (Master of Arts)",
+    bannerImage:MA,
     specialisation: "Economics",
     duration: "2 years",
     eligibility: "Graduation from a recognised board",
@@ -753,6 +797,7 @@ const courses = [
   {
     id: "ma-general",
     name: "MA (Master of Arts)",
+    bannerImage:MA,
     specialisation: "General (Subject-specific eligibility may apply)",
     duration: "2 years",
     eligibility: "Graduation/in some cases with the respective subject",
@@ -787,6 +832,7 @@ const courses = [
     id: "blib",
     name: "B.Lib (Library Science)",
     duration: "1 year",
+    bannerImage:Blib,
     eligibility: "Graduation",
     university: "Swami Vivekananda Subharti University Meerut",
     mode: "Distance Education",
@@ -823,6 +869,7 @@ const courses = [
     university: "Swami Vivekananda Subharti University Meerut",
     mode: "Distance Education",
     examPattern: "Semester system with 4-5 subjects each semester",
+    bannerImage: bba,
     documentsRequired: [
       "10th Mark sheet & certificate",
       "12th Mark sheet & certificate",
@@ -851,6 +898,7 @@ const courses = [
     name: "BA (Bachelor of Arts)",
     specialisation: "Sociology",
     duration: "3 years",
+    bannerImage:BaFineArts,
     eligibility: "12th from a recognized board",
     university: "Swami Vivekananda Subharti University, Meerut",
     mode: "Distance Education",
@@ -883,6 +931,7 @@ const courses = [
     name: "BA (Bachelor of Arts)",
     specialisation: "Political Science",
     duration: "3 years",
+    bannerImage:BaFineArts,
     eligibility: "12th from a recognized board",
     university: "Swami Vivekananda Subharti University, Meerut",
     mode: "Distance Education",
@@ -915,6 +964,7 @@ const courses = [
     name: "BA (Bachelor of Arts)",
     specialisation: "Mathematics",
     duration: "3 years",
+    bannerImage:BaFineArts,
     eligibility: "12th from a recognized board",
     university: "Swami Vivekananda Subharti University, Meerut",
     mode: "Distance Education",
@@ -947,6 +997,7 @@ const courses = [
     name: "BA (Bachelor of Arts)",
     specialisation: "History",
     duration: "3 years",
+    bannerImage:BaFineArts,
     eligibility: "12th from a recognized board",
     university: "Swami Vivekananda Subharti University, Meerut",
     mode: "Distance Education",
@@ -979,6 +1030,7 @@ const courses = [
     name: "BA (Bachelor of Arts)",
     specialisation: "Hindi",
     duration: "3 years",
+    bannerImage:BaFineArts,
     eligibility: "12th from a recognized board",
     university: "Swami Vivekananda Subharti University, Meerut",
     mode: "Distance Education",
@@ -1013,6 +1065,7 @@ const courses = [
     eligibility: "12th from a recognized board",
     university: "Swami Vivekananda Subharti University, Meerut",
     mode: "Distance Education",
+    bannerImage: bba,
     examPattern: "Semester system with 4-5 subjects each semester",
     documentsRequired: [
       "10th Mark sheet & certificate",
@@ -1042,6 +1095,7 @@ const courses = [
     name: "BA (Bachelor of Arts)",
     specialisation: "Journalism & Mass Communication",
     duration: "3 years",
+    bannerImage:BaFineArts,
     eligibility: "Graduation from a recognized board",
     university: "Swami Vivekananda Subharti University, Meerut",
     mode: "Distance Education",
@@ -1074,6 +1128,7 @@ const courses = [
     name: "BA (Bachelor of Arts)",
     specialisation: "English",
     duration: "3 years",
+    bannerImage:BaFineArts,
     eligibility: "12th from a recognized board",
     university: "Swami Vivekananda Subharti University, Meerut",
     mode: "Distance Education",
@@ -1106,6 +1161,7 @@ const courses = [
     name: "BA (Bachelor of Arts)",
     specialisation: "Economics",
     duration: "3 years",
+    bannerImage:BaFineArts,
     eligibility: "12th from a recognized board",
     university: "Swami Vivekananda Subharti University, Meerut",
     mode: "Distance Education",
@@ -1141,6 +1197,7 @@ const courses = [
     eligibility: "12th from a recognised board",
     university: "Swami Vivekananda Subharti University, Meerut",
     mode: "Distance Education",
+    bannerImage:Bcom,
     examPattern: "Semester system with 4-5 subjects each semester",
     documentsRequired: [
       "10th Mark sheet & Certificate",
@@ -1170,6 +1227,7 @@ const courses = [
     name: "B.Com (Honours)",
     specialisation: "Honours",
     duration: "3 years",
+    bannerImage:Bcom,
     eligibility: "12th from a recognised board",
     university: "Swami Vivekananda Subharti University, Meerut",
     mode: "Distance Education",
@@ -1202,6 +1260,7 @@ const courses = [
     name: "Diploma in Graphic Designing, Web Development",
     specialisation: "Graphic Designing, Web Development",
     duration: "1 year",
+    bannerImage: Diploma,
     eligibility: "12th from a recognized board",
     university: "OM Sterling Global University",
     mode: "Regular Education (Non-Attending)",
@@ -1234,6 +1293,7 @@ const courses = [
     name: "Certificate in Web Development, Graphic Designing",
     specialisation: "Web Development, Graphic Designing",
     duration: "1 year",
+    bannerImage:cert2,
     eligibility: "12th from a recognized board",
     university: "OM Sterling Global University",
     mode: "Regular Education (Non-Attending)",
@@ -1266,6 +1326,7 @@ const courses = [
     name: "Certificate in Advanced Digital Media & Marketing, Social Media Marketing, Search Engine Optimization",
     specialisation: "Digital Media & Marketing, Social Media Marketing, SEO",
     duration: "1 year",
+    bannerImage:Cert1,
     eligibility: "12th from a recognized board",
     university: "OM Sterling Global University",
     mode: "Regular Education (Non-Attending)",
@@ -1298,6 +1359,7 @@ const courses = [
     name: "Certificate Course in Continues Professional Development",
     specialisation: "Professional Development",
     duration: "1 year",
+    bannerImage:Cert1,
     eligibility: "12th from a recognized board",
     university: "OM Sterling Global University",
     mode: "Regular Education (Non-Attending)",
@@ -1330,6 +1392,7 @@ const courses = [
     name: "Certificate (Yoga & Naturopathy)",
     specialisation: "Yoga & Naturopathy",
     duration: "1 year",
+    bannerImage:YogaCret,
     eligibility: "12th from a recognized board",
     university: "OM Sterling Global University",
     mode: "Regular Education (Non-Attending)",
@@ -1362,6 +1425,7 @@ const courses = [
     name: "Certificate (Course in Library)",
     specialisation: "Library Science",
     duration: "1 year",
+    bannerImage:Blib,
     eligibility: "12th from a recognized board",
     university: "OM Sterling Global University",
     mode: "Regular Education (Non-Attending)",
@@ -1394,6 +1458,7 @@ const courses = [
     name: "B.Sc (Medical), (Non-Medical), (Home Science)",
     specialisation: "Medical, Non-Medical, Home Science",
     duration: "3 years",
+    bannerImage:BSCMed,
     eligibility: "12th from a recognized board (With Science)",
     university: "OM Sterling Global University",
     mode: "Regular Education (Non-Attending)",
@@ -1426,6 +1491,7 @@ const courses = [
     name: "B.Sc (Hons)-Microbiology",
     specialisation: "Microbiology",
     duration: "3 years",
+    bannerImage:BSCMicrobiology,
     eligibility: "12th from a recognized board (With Science)",
     university: "OM Sterling Global University",
     mode: "Regular Education (Non-Attending)",
@@ -1458,6 +1524,7 @@ const courses = [
     name: "BCA",
     specialisation: "Computer Applications",
     duration: "3 years",
+    bannerImage:BCA,
     eligibility: "12th from a recognized board",
     university: "OM Sterling Global University",
     mode: "Regular Education (Non-Attending)",
@@ -1490,6 +1557,7 @@ const courses = [
     name: "BBA",
     specialisation: "Business Administration",
     duration: "3 years",
+    bannerImage:bba,
     eligibility: "12th from a recognized board",
     university: "OM Sterling Global University",
     mode: "Regular Education (Non-Attending)",
@@ -1522,6 +1590,7 @@ const courses = [
     name: "Bachelors in Physiotherapy",
     specialisation: "Physiotherapy",
     duration: "4 years",
+    bannerImage:physotherapiest,
     eligibility: "Graduation from a recognized board",
     university: "OM Sterling Global University",
     mode: "Regular Education (Non-Attending)",
@@ -1588,6 +1657,7 @@ const courses = [
     name: "BA (Fine Arts)",
     specialisation: "Fine Arts",
     duration: "3 years",
+    bannerImage:BaFineArts,
     eligibility: "12th from a recognized board",
     university: "OM Sterling Global University",
     mode: "Regular Education (Non-Attending)",
@@ -1619,6 +1689,7 @@ const courses = [
       id: "bsc-yoga-naturopathy",
       name: "B.S.C (Yoga & Naturopathy)",
       duration: "1 years",
+      bannerImage:Yoga,
       eligibility: "12th from a recognized board (With Science)",
       university: "OM Sterling global university",
       mode: "REGULAR Education (Non-Attending)",
@@ -1650,6 +1721,7 @@ const courses = [
       id: "bsc-dairy-tech-forestry-fisheries-horticulture",
       name: "B.S.C (Dairy Tech),(Forestry),(Fisheries),(Horticulture)",
       duration: "3 years",
+      bannerImage:BSCMed,
       eligibility: "12th from a recognized board (With Science)",
       university: "OM Sterling global university",
       mode: "REGULAR Education (Non-Attending)",
@@ -1681,6 +1753,7 @@ const courses = [
       id: "ba-applied-arts",
       name: "B.A. (Applied Arts)",
       duration: "3 years",
+      bannerImage:BaFineArts,
       eligibility: "12th from a recognized board",
       university: "UGC APPROVED UNIVERSITY",
       mode: "REGULAR Education (Non-Attending)",
@@ -1712,6 +1785,7 @@ const courses = [
       id: "bsc-computer-science-textile-design",
       name: "B.S.C (Computer Science),(Textile Design)",
       duration: "3 years",
+      bannerImage:BSCComputertextile,
       eligibility: "12th from a recognized board (With Science)",
       university: "OM Sterling global university",
       mode: "REGULAR Education (Non-Attending)",
@@ -1745,6 +1819,7 @@ const courses = [
       duration: "3 years",
       eligibility: "12th from a recognized board (With Science)",
       university: "OM Sterling global university",
+      bannerImage:BSCMed,
       mode: "REGULAR Education (Non-Attending)",
       examPattern: "Semester system with 4-5 subjects each semester",
       documentsRequired: [
@@ -1777,6 +1852,7 @@ const courses = [
       eligibility: "12th from a recognized board (With Science)",
       university: "OM Sterling global university",
       mode: "REGULAR Education (Non-Attending)",
+      bannerImage:BSCMed,
       examPattern: "Semester system with 4-5 subjects each semester",
       documentsRequired: [
         "10th Mark sheet & Certificate",
@@ -1805,6 +1881,7 @@ const courses = [
       id: "bsc-hotel-management",
       name: "B.S.C Hotel Management (BHM)",
       duration: "3 years",
+      bannerImage:BSCHotelManagement,
       eligibility: "12th from a recognized board (With Science)",
       university: "OM Sterling global university",
       mode: "REGULAR Education (Non-Attending)",
@@ -1867,6 +1944,7 @@ const courses = [
       id: "bsc-nutrition-dietetic-public-bph",
       name: "B.S.C (Nutrition & Dietetic), (Public), (BPH)",
       duration: "3 years",
+      bannerImage:BSCMed,
       eligibility: "12th from a recognized board (With Science)",
       university: "OM Sterling global university",
       mode: "REGULAR Education (Non-Attending)",
@@ -1898,6 +1976,7 @@ const courses = [
       id: "ba",
       name: "BA",
       duration: "3 years",
+      bannerImage:BaFineArts,
       eligibility: "12th from a recognized board",
       university: "OM Sterling global university",
       mode: "REGULAR Education (Non-Attending)",
@@ -1928,6 +2007,7 @@ const courses = [
     {
       id: "ba-fine-arts",
       name: "BA (Fine Arts)",
+      bannerImage:BaFineArts,
       specialisation: "Fine Arts",
       duration: "3 years",
       eligibility: "12th from a recognized board",
@@ -1960,6 +2040,7 @@ const courses = [
     {
       id: "bcom",
       name: "B.Com",
+      bannerImage:Bcom,
       specialisation: "Commerce",
       duration: "3 years",
       eligibility: "12th from a recognized board",

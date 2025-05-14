@@ -34,6 +34,15 @@ const NavList = ({ onClick }: { onClick?: () => void }) => {
           About
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/courses"
+          onClick={onClick}
+          className={({ isActive }) => (isActive ? 'active-tab' : '')}
+        >
+          Courses
+        </NavLink>
+      </li>
 
       {featuredCourses.map((course) => (
         <li key={course.id}>
